@@ -1,0 +1,23 @@
+
+  /*lang_switch  */
+  
+  .lang_switch {
+    margin-left: min(3.57vw ,5rem);
+
+    select {
+      @include font-size("XS");
+      border: none;
+      background: none;
+      color: white;
+    }
+  
+    option {
+      background: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  @include responsive("sp") {
+    .lang_switch {
+      margin-left: 0;
+    }
+  }

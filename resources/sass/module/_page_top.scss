@@ -1,0 +1,47 @@
+ 
+  /* 
+  　ページトップへ戻る用-------------------------*/
+  
+  #page_top {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 100;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid black;
+    transition: 0.2s;
+  
+    p {
+      padding: 30px 0px 0px 10px;
+      font-weight: 700;
+      color: white;
+      z-index: 150;
+      position: absolute;
+      left: 42%;
+      transform: translateX(-50%);
+      font-size: 1.6rem;
+    }
+  
+    i {
+      position: absolute;
+      margin: auto;
+      top: 25%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      color: #ffffff;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+    &:hover p{
+      color: black;
+    }
+    &:hover i{
+      color: black;
+    }   
+  }

@@ -1,0 +1,188 @@
+/* ---------------------------
+     production 
+  ---------------------------- */
+
+.production {
+    white-space: pre-wrap;
+    width: 100%;
+    margin: min(7.14vw, 10rem) auto 0;
+    z-index: 10;
+    position: relative;
+    // height: min(150vw, 200rem);
+
+    &__inner {
+        @include inner;
+        // position: sticky;
+        height: auto;
+        // top: 10rem; //この位置で固定している。
+    }
+
+    &__tittle-main {
+        @include top-title("main");
+    }
+
+    &__tittle-sub {
+        @include top-title("sub");
+    }
+
+    &__section {
+        width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+        margin-top: min(5vw, 7rem);
+    }
+    &__cont {
+        width: min(100%, 50rem) !important;
+        margin: 0 0 min(7.14vw, 10rem);
+        display: block;
+    }
+
+    &__about {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: min(1.42vw, 2rem) 0;
+        margin-top: auto;
+    }
+
+    &__about-list {
+        list-style: none;
+        text-align: center;
+    }
+
+    &__about-tags {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    &__about-tag {
+        @include font-size("XS");
+        font-weight: bold;
+        padding: 0.3em 0.5em;
+        border: 1px solid black;
+        border-radius: 9999px;
+    }
+
+    &__about-item {
+        &:nth-child(1) {
+            @include font-size("M");
+            font-weight: bold;
+            padding-top: min(1vw, 1rem);
+        }
+
+        &:nth-child(2) {
+            @include font-size("S");
+            padding-top: min(1vw, 1rem);
+        }
+    }
+
+    &__elem {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        color: black;
+        text-decoration: none;
+        box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.2);
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        padding: 5%;
+        margin: 0 auto 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__pic {
+        width: 100%;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 56%;
+        }
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            object-fit: contain;
+        }
+
+        &:hover .production__mask {
+            opacity: 1;
+        }
+    }
+    &__caption {
+        @include font-size("XS");
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 0 2.5%;
+    }
+    &__mask {
+        width: 100%;
+        height: 100%;
+        position: absolute; /* 絶対位置指定 */
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* マスクは半透明 */
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+}
+.slick-list {
+    width: 100%;
+    margin: auto !important;
+}
+.slick-track {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+}
+
+@include responsive("tb") {
+    .production {
+        top: 0;
+        height: auto;
+
+        &__section {
+            display: block;
+        }
+
+        &__cont {
+            width: max(70%, 45rem);
+            margin: 0 auto min(4vw, 4rem);
+        }
+    }
+}
+
+@include responsive("sp") {
+    .production {
+        margin-top: min(23.25vw, 10rem);
+
+        &__elem {
+            margin: 0 auto;
+            width: min(100%, 35rem);
+        }
+
+        &__section {
+            margin-top: min(6.97vw, 3rem);
+        }
+
+        &__about-item {
+            &:nth-child(3) {
+                padding: min(2.3vw, 1rem);
+                margin-top: min(4.65vw, 2rem);
+            }
+        }
+
+        &__cont {
+            width: 100%;
+            margin: 0 0 min(7.5vw, 4rem);
+        }
+    }
+}

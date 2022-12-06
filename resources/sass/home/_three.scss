@@ -1,0 +1,41 @@
+.Three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+
+  &__content{
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display:block;
+    font-weight: bold;
+    filter: drop-shadow(2px 2px 5px rgba(200, 200, 200, 0.3));
+  }
+
+  &__tittle-main{
+    @include top-title("fv_main");
+  }
+
+  &__tittle-sub{
+    @include top-title("fv_sub");
+    padding-top: 1em;
+  }
+
+  &__canvas{
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+
+@include  responsive("sp"){
+  .Three {
+    &__content{
+      top: 43%;
+    }
+  }
+}

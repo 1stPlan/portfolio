@@ -1,0 +1,57 @@
+/*---------------------------
+    blog_show
+  --------------------------- */
+
+.blog{
+    padding: 7rem 0 5rem;
+
+    &__inner{
+        @include inner("blog");    
+    }
+
+    &__content{
+        width: 100%;
+    }
+
+    &__header{
+        margin-top: 3rem;
+    }
+    
+    &__tittle{
+        @include font-size("L");
+        font-weight: bold;
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
+    }
+
+    &__date{
+        @include font-size("S");    
+    }
+
+    &__body{
+        @include font-size("M");
+        margin-top: 3rem;
+        padding: 3rem 5rem;
+        border: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .btn{
+        margin-top: 2rem;
+    }   
+}
+
+@include responsive("sp") {
+    .blog{
+        padding: 5.8rem 0 min(6.9vw, 3rem);
+
+        &__header{
+            margin-top: min(6.9vw, 3rem);
+        }
+
+        &__body{
+            margin-top: min(6.9vw, 3rem);
+            padding: 3rem 2rem;
+        }
+    
+    }
+}

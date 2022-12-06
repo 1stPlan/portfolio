@@ -1,0 +1,38 @@
+/* footer -----------*/
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5rem;
+
+    &__tittle {
+        text-align: center;
+        font-weight: bold;
+
+        h4 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        p {
+            padding-top: 1rem;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+    }
+    &__copyright {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+}
+
+@include responsive("sp") {
+    .footer {
+        padding: 5rem min(11.6vw, 5rem);
+    }
+  }
+

@@ -1,0 +1,25 @@
+{
+    "about": {
+      "heading" : "「I want to create exciting things using technology and expression.」",
+      "name": "RYOUYA NAKANO【1stPlan】",
+      "explanation": "PHPengineer（ Wordpress, Laravel ）,web-coder,front-engineer.\n On a daily basis, I want to create exciting things using technology and expression.\n Currently working as a programmer and coder.In the future, I would like to work on many projects as a PHP programmer and expand my abilities.The ultimate goal is to create something that will be touched by the next generation.",
+      "skill":  "skill list",
+      "skill-text":  "I have gained experience working in a venture company and am capable of handling development projects as part of a team.\n I can manage tasks from the initial setup to release, even within a short timeframe.\n I have experience with frameworks such as Laravel and WordPress, but I am flexible and can adapt to different requirements. Additionally, I have personal experience in creating websites, including design and the use of Adobe products.",
+      "skill-years--1":"【 development experience : 　2years 】",
+      "skill-years--2":"【 development experience : 　2years 】"
+    },
+    "production_home": {
+      "explanation":"Product introduction",
+      "web_site_1":"DogRun Yamaguchi",
+      "web_site_1_about":"A search site limited to Yamaguchi Prefecture that allows you to quickly find dog runs near you. \nA dock run search site with the largest amount of information and ease of use in Yamaguchi Prefecture",
+      "web_site_2":"Mens Look",
+      "web_site_2_about":"Skin care and cosmetics solve men's skin problems that increase with age. We conduct research every day and share recommended information.",
+      "web_site_3":"Ryunosato Yadomi",
+      "web_site_3_about":"Please try our special fragrant 100% buckwheat noodles, \nwhich are made by stone-milling local buckwheat seeds at a soba restaurant in a part of a closed elementary school in Hagi City, Yamaguchi Prefecture."
+    },
+    "contact":{
+      "tittle":"For companies",
+      "explanation":"If you just want to say hello, feel free to get in touch."
+    }
+
+}

@@ -1,0 +1,81 @@
+@mixin font-size($type: "S") {
+
+    // blog-list time
+    // lang_switch select
+
+    @if $type == "XS" {
+        font-size: min(0.857vw, 1.2rem); 
+        line-height: 1.5;
+        @include responsive("sp") {
+            font-size: min(2.79vw, 1.2rem); 
+        }
+    }
+
+    // production about-item nth-child(1)
+    // production about-item nth-child(3)
+    // blog-list title_rendered
+    // blog headr date
+       
+    @if $type == "S" {
+        font-size: min(1.285vw, 1.8rem); 
+        // font-size: clamp(1.1rem, calc(0.9rem + 0.625vw), 1.6rem);
+        line-height: 1.5;
+        @include responsive("sp") {
+            font-size: min(3.48vw, 1.5rem); 
+        }
+    }
+
+     // about explanation
+     // blog body
+     // contact  explanation
+     // contact address
+
+    @if $type == "M" {
+        font-size: min(1.428vw, 2rem);
+        line-height: 1.5;
+        @include responsive("sp") {
+            font-size: min(3.77vw, 1.7rem)
+        }
+    }
+
+    // blog headr tittle
+    // production about-item nth-child(2)
+    // about heading 
+
+    @if $type == "L" {
+        font-size: min(2.14vw, 3rem);
+        line-height: 1.5;
+
+        @include responsive("sp") {
+            font-size: min(4.65vw, 2rem);
+        }
+    }
+
+    // skill-title
+    // skill-subtitle
+
+    @if $type == "LL" {
+        font-size: min(2.142vw, 3rem);
+        line-height: 1.5;
+        font-weight: bold;
+
+        @include responsive("sp") {
+            font-size: min(5.81vw, 2.5rem); 
+        }
+    }
+
+    // .about name
+    
+    @if $type == "LLL" {
+        // font-size: max(2.857vw, 4rem);
+        font-size: min(2.857vw, 4rem);
+        line-height: 1.5;
+        font-weight: bold;
+
+        @include responsive("sp") {
+            font-size: min(6.976vw, 3rem);
+        }
+        
+    }
+    
+}

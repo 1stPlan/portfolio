@@ -1,0 +1,31 @@
+@mixin top-title($type: "main") {
+    @if $type == "main" {
+        line-height: 1.5;
+        font-weight: 900;
+        font-size: clamp(4rem, 5.714vw, 8rem);
+
+        @include responsive("sp") {
+            font-size: min(10.67vw, 4rem);
+        }
+    }
+
+    @if $type == "sub" {
+        line-height: 1.5;
+        font-weight: bold;   
+        font-size: min(1.714vw, 2.4rem);
+
+        @include responsive("sp") {
+            font-size: min(4.65vw, 2rem);
+        }
+    }
+
+    @if $type == "fv_main" {
+        font-size: clamp(5rem, 12vw, 12rem);
+        font-weight: bold;
+    }
+
+    @if $type == "fv_sub" {
+        font-size: clamp(3rem, 6vw, 5rem);
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,100 @@
+/*---------------------------
+      qiita-list
+  --------------------------- */
+.qiita-list {
+    padding-top: 7rem;
+
+    &__inner {
+        @include inner("qiita");
+    }
+    &__main-title {
+        @include font-size("LL");
+        text-align: center;
+        font-weight: bold;
+        margin-top: min(2.86vw, 4rem);
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 6rem;
+            height: 3px;
+            display: inline-block;
+            background-color: green;
+            position: absolute;
+            bottom: -2rem;
+            left: calc(50% - 30px);
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        margin: min(2.86vw, 4rem) auto min(3.57vw, 5rem);
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include font-size("S");
+        text-align: left;
+        line-height: 1.6;
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+
+    &__body_rendered {
+        text-align: left;
+    }
+
+    &__date {
+        @include font-size("XS");
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+        text-align: left;
+    }
+    &__tags {
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    &__tag {
+        background-color: green;
+        padding: 0.2rem 1rem;
+        border-radius: 9999px;
+        color: white;
+    }
+}
+@include responsive("tb") {
+    .qiita-list {
+    }
+}
+@include responsive("sp") {
+    .qiita-list {
+        &__list {
+            width: 100%;
+            margin: 3rem auto;
+        }
+
+        .qiita-list {
+            padding-top: 7rem;
+
+            &__inner {
+                @include inner("qiita");
+            }
+            &__main-title {
+                &::after {
+                    content: "";
+                    bottom: -1rem;
+                }
+            }
+        }
+    }
+}

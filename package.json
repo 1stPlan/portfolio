@@ -1,0 +1,43 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@emotion/react": "^11.11.1",
+        "@fortawesome/fontawesome-free": "^6.4.2",
+        "@popperjs/core": "^2.10.2",
+        "@react-three/fiber": "^8.8.10",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@vitejs/plugin-react": "^2.0.0",
+        "axios": "^1.1.2",
+        "bootstrap": "^5.3.1",
+        "font-awesome-scss": "^1.0.0",
+        "gsap": "^3.11.3",
+        "i18next": "^22.0.4",
+        "laravel-vite-plugin": "^0.6.0",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-i18next": "^12.0.0",
+        "react-router-dom": "^5.3.4",
+        "react-scripts": "^5.0.1",
+        "react-youtube": "^10.0.0",
+        "sass": "^1.66.1",
+        "three": "^0.145.0",
+        "three.meshline": "^1.4.0",
+        "vite": "^3.0.0",
+        "web-vitals": "^2.1.4"
+    },
+    "dependencies": {
+        "@react-three/drei": "^9.82.0",
+        "react-loading": "^2.0.3",
+        "react-paginate": "^8.2.0",
+        "react-slick": "^0.30.2",
+        "slick-carousel": "^1.8.1"
+    }
+}

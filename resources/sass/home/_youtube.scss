@@ -1,0 +1,43 @@
+/* youtube ---------------------------- */
+.youtube {
+    padding-top: clamp(40rem, 67vw, 60rem);
+    background-color: white;
+
+    &__inner {
+        @include inner;
+        padding: 0;
+        height: 150vh;
+    }
+    &__movie {
+        margin: 0 auto;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+    &__ifreme {
+        position: absolute;
+        top: calc(50% + 70px);
+        left: 50%;
+        opacity: 0;
+        transition: opacity 2s .5s;
+        min-width: 100%;
+        min-height: calc(100% - 70px);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@include responsive("sp") {
+    .youtube {
+        &__inner {
+            height: 140vh;
+        }
+
+        &__movie {
+            margin: 0 auto;
+        }
+
+    }
+
+}

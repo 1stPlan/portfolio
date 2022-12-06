@@ -1,0 +1,114 @@
+/*---------------------------
+      blog-list
+  --------------------------- */
+.blog-list{
+    padding-top: 7rem;
+
+    &__inner{
+        @include inner("blog");
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 5rem;
+        column-gap: 2.5%;
+        width: 100%;
+        margin-top: 5rem;
+
+        &::after{
+            content:"";
+            display: block;
+            width: 31.25%;
+        }
+    }
+
+    &__item{
+        width: 31.25%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__thumbnail{
+        width: 100%;
+        position: relative;
+
+        &::before{
+            content: "";
+            display: block;
+            padding-top: 75%;
+        }
+
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            object-fit: cover;
+        }
+    }
+
+    &__title_rendered{
+        @include font-size("S");
+        text-align: left;
+        line-height: 1.6;
+        font-weight: 500;
+        padding-bottom: 1rem;
+    }
+
+    &__time {
+        @include font-size("XS");
+        font-weight: bold;
+        padding-top: 0.8rem;
+        padding-bottom: 0.5rem;
+        text-align: left;
+    }
+    
+    &__navigation{
+        margin: 2rem auto 7rem;
+        width: 12rem;
+    }
+
+}
+@include responsive("tb") {
+    .blog-list{
+
+        &__list{
+            &::after{
+                width: 48%;
+            }
+        }
+
+        &__item{
+            width: 48%;
+        }
+    }
+}
+@include responsive("sp") {
+    .blog-list{
+        padding-top: 5.8rem;
+
+        &__list{
+            row-gap: min(9vw, 5rem);
+            margin-top: min(9vw, 5rem);
+            
+            &::after{
+                width: 100%;
+            }
+        }
+
+        &__item{
+            width: 100%;
+        }
+
+        &__navigation{
+            margin: 2rem auto min(16vw, 7rem);
+            width: 12rem;
+        }
+    }
+}

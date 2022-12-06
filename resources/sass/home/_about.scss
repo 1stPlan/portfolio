@@ -1,0 +1,152 @@
+/*---------------------------
+    about 
+  --------------------------- */
+
+.about {
+    white-space: pre-wrap;
+    padding-top: min(7.14vw, 10rem);
+    width: 100%;
+    margin: auto;
+    z-index: 10;
+    transition: opacity 1s;
+    opacity: 0;
+
+    &__tittle-main {
+        @include top-title("main");
+    }
+
+    &__inner {
+        @include inner;
+    }
+
+    &__heading {
+        @include font-size("L");
+        font-weight: bold;
+        margin-top: min(2.14vw, 3rem);
+    }
+    &__profile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: min(1.43vw, 2rem);
+    }
+    &__profile_img {
+        width: 30%;
+    }
+
+    &__profile_box {
+        width: 65%;
+    }
+    &__name {
+        @include font-size("LLL");
+    }
+    &__explanation {
+        @include font-size("M");
+        line-height: 1.7;
+        padding-top: min(1.785vw, 2.5rem);
+    }
+    &__skill {
+        width: 80%;
+        margin: min(7.14vw, 10rem) auto 0;
+    }
+    &__skill-title {
+        @include font-size("LL");
+        text-align: center;
+        border-bottom: 3px solid black;
+        font-weight: bold;
+        line-height: 2;
+    }
+    &__skill-text {
+        @include font-size("S");
+        line-height: 2;
+        padding-top: min(2.7vw, 3rem);
+    }
+    &__skill-item {
+        margin-top: min(7.14vw, 10rem);
+    }
+    &__skill-item:first-child {
+        margin-top: min(5vw, 7rem);
+    }
+    &__skill-subtitle {
+        @include font-size("LL");
+        font-weight: bold;
+        text-align: center;
+    }
+    &__skill-years {
+        @include font-size("S");
+        text-align: center;
+        font-weight: bold;
+        padding-top: 1rem;
+    }
+    &__skill-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: min(3.57vw, 5rem);
+        width: 60%;
+        margin: min(3.57vw, 5rem) auto 0;
+    }
+    &__skill-img {
+        flex: 1;
+    }
+}
+
+@include responsive("tb") {
+    .about {
+        &__skill-box {
+            width: 80%;
+        }
+    }
+}
+
+@include responsive("sp") {
+    .about {
+        padding-top: min(23.25vw, 10rem);
+
+        &__inner {
+            margin-top: min(7vw, 4rem);
+        }
+
+        &__profile {
+            display: block;
+            width: 100%;
+        }
+
+        &__profile_img {
+            width: min(70%, 18rem);
+            margin: 0 auto;
+            display: block;
+        }
+
+        &__profile_box {
+            width: 100%;
+        }
+
+        &__name {
+            padding-top: min(6.976vw, 3rem);
+        }
+
+        &__explanation {
+            padding-top: min(5.8vw, 2.5rem);
+        }
+
+        &__skill {
+            width: 100%;
+            margin: min(13.33vw, 5rem) auto 0;
+        }
+        &__skill-item {
+            margin-top: min(13.33vw, 5rem);
+        }
+        &__skill-item:first-child {
+            margin-top: min(13.33vw, 5rem);
+        }
+        &__skill-text {
+            padding-top: min(8vw, 3rem);
+        }
+
+        &__skill-box {
+            width: 75%;
+            margin: min(8vw, 3rem) auto 0;
+        }
+    }
+}

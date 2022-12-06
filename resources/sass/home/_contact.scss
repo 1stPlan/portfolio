@@ -1,0 +1,70 @@
+/*---------------------------
+    contact
+  --------------------------- */
+
+.contact {
+    white-space: pre-wrap;
+    width: 100%;
+    margin: 0 auto min(7.14vw, 10rem);
+    z-index: 10;
+
+    &__inner {
+        @include inner;
+    }
+
+    &__tittle-main {
+        @include top-title("main");
+    }
+    &__explanation-tittle {
+        @include font-size("M");
+        padding-top: 3em;;
+        font-weight: bold;
+    }
+    &__explanation {
+        @include font-size("M");
+        padding-top: 2em;
+    }
+
+    &__content {
+        display: flex;
+        padding-top: 2%;
+        align-items: flex-end;
+    }
+
+    &__address {
+        @include font-size("L");
+        padding-right: 1.5em;
+        line-height: 1.5;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
+
+    &__icon {
+        width: max(1.8vw, 2rem);
+        padding-top: 0.2rem;
+    }
+
+}
+@include responsive("sp") {
+    .contact {
+        margin: min(18vw, 8rem) auto;
+    
+        &__explanation-tittle {
+            padding-top: min(4vw, 1.5rem);
+        }
+        
+        &__explanation {
+            padding-top: min(2.67vw, 1rem);
+        }
+
+        &__address {
+            padding-right: min(6.9vw, 3rem);
+        }
+
+        &__icon {
+            width: min(5.33vw, 2rem);
+        }
+    }
+
+}

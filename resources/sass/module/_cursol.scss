@@ -1,0 +1,34 @@
+  
+  #cursor {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    z-index: 999999;
+  
+    /*一番手前に来るように*/
+    width: 8px;
+    height: 8px;
+    margin: -10px 0 0 -10px;
+  
+    /*真ん中にくるようにマイナスマージンで調整*/
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    pointer-events: none;
+  
+    /*クリックできなくなるのを防ぐため。noneで対応*/
+    opacity: 0;
+    top: -4px;
+    left: -4px;
+  
+    /* -webkit-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s; */
+  
+    &.hov_ {
+      top: -12px;
+      left: -12px;
+      width: 32px;
+      height: 32px;
+      background: rgba(200, 50, 50, 0.75);
+    }
+  }
+  
