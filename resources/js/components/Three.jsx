@@ -97,6 +97,25 @@ function Earth(){
 };
    
 
+class CanvasErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return null;
+    }
+
+    return this.props.children;
+  }
+}
+
   const Three = () => {
 
     useEffect(() => {
@@ -105,8 +124,13 @@ function Earth(){
    }, [])
 
     const setAnimation = () => {
+      const target = document.querySelector('.Three__canvas');
+      if (!target) {
+        return;
+      }
+
       gsap.fromTo(
-        '.Three__canvas',
+        target,
         { opacity: 1, //fromの設定
           scale: 1 ,
         }, 
@@ -140,11 +164,13 @@ function Earth(){
             Program & Design
           </h4>
         </div>
-          <Canvas  className="Three__canvas">
-            <Things />
-            <Stars />
-            <Earth />
-          </Canvas>
+          <CanvasErrorBoundary>
+            <Canvas  className="Three__canvas">
+              <Things />
+              <Stars />
+              <Earth />
+            </Canvas>
+          </CanvasErrorBoundary>
       </div>
 
     );
@@ -152,10 +178,3 @@ function Earth(){
 
 
 export default Three;
-
-
-
-
-
-
-
