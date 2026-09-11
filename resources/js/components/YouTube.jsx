@@ -11,7 +11,7 @@ const YouTube = () => {
                         muted
                         playsInline
                         src={`/img/start.mp4`}
-                        class="youtube__ifreme"
+                        className="youtube__ifreme"
                         id="movie"
                     />
                 </div>

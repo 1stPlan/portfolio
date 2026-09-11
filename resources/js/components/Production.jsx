@@ -117,15 +117,15 @@ const Production = () => {
                                         id="select_1"
                                         src={`/img/dogrun.jpg`}
                                     />
-                                    <div class="production__mask">
-                                        <div class="production__caption">
+                                    <div className="production__mask">
+                                        <div className="production__caption">
                                             {t(
                                                 "production_home.web_site_1_about"
                                             )}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="production__about">
+                                <div className="production__about">
                                     <ul className="production__about-tags">
                                         <li className="production__about-tag">
                                             portfolio
@@ -147,19 +147,17 @@ const Production = () => {
                         </div>
 
                         <div className="production__cont">
-                            <a
-                                className="production__elem"
-                                href="https://menslook.info/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div className="production__elem production__elem--unpublished">
                                 <div className="production__pic">
                                     <img
                                         id="select_2"
                                         src={`/img/mens_look.jpg`}
                                     />
-                                    <div class="production__mask">
-                                        <div class="production__caption">
+                                    <span className="production__status">
+                                        {t("production_home.unpublished")}
+                                    </span>
+                                    <div className="production__mask">
+                                        <div className="production__caption">
                                             {t(
                                                 "production_home.web_site_2_about"
                                             )}
@@ -180,11 +178,11 @@ const Production = () => {
                                             {t("production_home.web_site_2")}
                                         </li>
                                         <li className="production__about-item">
-                                            https://menslook.info/
+                                            {t("production_home.unpublished")}
                                         </li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <div className="production__cont">
@@ -199,8 +197,8 @@ const Production = () => {
                                         id="select_3"
                                         src={`/img/ryuunosato.png`}
                                     />
-                                    <div class="production__mask">
-                                        <div class="production__caption">
+                                    <div className="production__mask">
+                                        <div className="production__caption">
                                             {t(
                                                 "production_home.web_site_3_about"
                                             )}
@@ -208,7 +206,7 @@ const Production = () => {
                                     </div>
                                 </div>
 
-                                <div class="production__about">
+                                <div className="production__about">
                                     <ul className="production__about-tags">
                                         <li className="production__about-tag">
                                             shop

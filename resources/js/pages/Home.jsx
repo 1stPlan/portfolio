@@ -89,7 +89,7 @@ function Home() {
                 <YouTube />
                 <About />
                 <Production />
-                <Contact />
+                {/* <Contact /> */}
             </div>
             {/* } */}
             <Top />

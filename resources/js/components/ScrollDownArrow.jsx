@@ -41,11 +41,11 @@ function ScrollDownArrow() {
 
     return (
         <div
-            class="scroll-down-arrow"
+            className="scroll-down-arrow"
             id="scroll-down-arrow"
             ref={scrolldownarrow}
         >
-            <a class="scroll-down-arrow__link">
+            <a className="scroll-down-arrow__link">
                 <span></span>Click
             </a>
         </div>
